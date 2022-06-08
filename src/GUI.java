@@ -109,14 +109,21 @@ public class GUI implements ActionListener
         panel3 = new ImageIcon(scaledPanel3);
         JLabel panelLabel3 = new JLabel(panel3);
         panelPanel.add(panelLabel3);
+        //chapter 1.4
+        ImageIcon panel4 = new ImageIcon("src/Chapter1.4.jpg");
+        Image panelData4 = panel4.getImage();
+        Image scaledPanel4 = panelData4.getScaledInstance(700, 11000, Image.SCALE_SMOOTH);
+        panel4 = new ImageIcon(scaledPanel4);
+        JLabel panelLabel4 = new JLabel(panel4);
+        panelPanel.add(panelLabel4);
 
         //Chapter Panel
         JScrollPane scrollPane = new JScrollPane(panelPanel);
         scrollPane.setPreferredSize(new Dimension(100, 500));
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
         JComponent component2 = scrollPane;
+        tabbedPane.setAlignmentX(Component.CENTER_ALIGNMENT);
         tabbedPane.addTab("Tab 2", component2);
-
 
         frame.add(logoWelcomePanel, BorderLayout.NORTH);
         frame.add(tabbedPane, BorderLayout.CENTER);
